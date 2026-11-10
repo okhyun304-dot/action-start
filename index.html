@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>행동주의자 — 기상모임 아니다. 독서모임도 아니다.</title>
+<meta name="description" content="시장과 인생을 동시에 다루는 훈련소. 2020년 10월부터 행동주의자가 운영하는 행동모임.">
+<meta property="og:title" content="행동주의자 — 기상모임 아니다. 독서모임도 아니다.">
+<meta property="og:description" content="5시에 일어나는 게 중요한 게 아니다. 일어난 다음 무엇을 하느냐가 중요하다.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0a0a0b;--bg-2:#121214;--line:#2a2a2e;--line-soft:#1e1e21;
+    --fg:#f4f4f2;--fg-2:#adadaa;--fg-3:#767673;
+    --accent:#e2402a;--accent-soft:rgba(226,64,42,.11);
+    --maxw:640px;
+  }
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--bg);color:var(--fg);
+    font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',sans-serif;
+    font-size:16.5px;line-height:1.8;letter-spacing:-.012em;
+    word-break:keep-all;overflow-wrap:break-word;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  section{padding:72px 0;border-top:1px solid var(--line-soft)}
+  .eyebrow{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.16em;color:var(--accent);margin-bottom:14px}
+  h2{font-size:clamp(25px,6.4vw,34px);font-weight:800;line-height:1.32;letter-spacing:-.035em;margin-bottom:18px}
+  p{color:var(--fg-2)}
+  strong{color:var(--fg);font-weight:700}
+
+  /* 01 선언 */
+  .hero{border-top:none;padding:84px 0 76px;min-height:92vh;min-height:92svh;display:flex;align-items:center}
+  .hero .who{font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--fg-3);margin-bottom:34px}
+  .hero h1{font-size:clamp(38px,11vw,62px);font-weight:800;line-height:1.16;letter-spacing:-.055em;margin-bottom:22px}
+  .hero h1 .hl{color:var(--accent)}
+  .hero .sub{font-size:clamp(18px,4.8vw,21px);font-weight:700;color:var(--fg);letter-spacing:-.03em;margin-bottom:44px}
+  .lines p{font-size:16.5px;margin-bottom:18px}
+  .lines p b{color:var(--fg);font-weight:700}
+  .pull{
+    border-left:3px solid var(--accent);padding:4px 0 4px 18px;margin:34px 0 30px;
+    font-size:clamp(18px,4.8vw,21px);font-weight:700;line-height:1.62;letter-spacing:-.03em;color:var(--fg);
+  }
+  .since{font-size:15px;color:var(--fg-3)}
+  .since b{color:var(--fg-2);font-weight:700}
+
+  /* 02 강의 */
+  .clip{margin:26px 0 0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#000}
+  .clip video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#000}
+  .clip figcaption{padding:13px 16px 15px;background:var(--bg-2);border-top:1px solid var(--line);font-size:13px;color:var(--fg-3);line-height:1.55}
+  .clip .lab{display:block;font-size:10.5px;font-weight:800;letter-spacing:.12em;color:var(--accent);margin-bottom:4px}
+  .clip b{display:block;font-size:15.5px;font-weight:700;color:var(--fg);letter-spacing:-.02em;margin-bottom:3px}
+
+  /* 03 400일 */
+  .count{display:flex;align-items:baseline;gap:12px;margin:30px 0 8px}
+  .count .n{font-size:clamp(64px,19vw,104px);font-weight:800;letter-spacing:-.06em;line-height:1;color:var(--fg)}
+  .count .u{font-size:15px;color:var(--fg-3)}
+  .steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:18px 0 30px}
+  .steps li{height:6px;border-radius:3px;background:var(--accent)}
+  .steps li:nth-child(1){opacity:.45}.steps li:nth-child(2){opacity:.6}.steps li:nth-child(3){opacity:.8}
+  .story p{margin-bottom:10px}
+  .story p:last-child{margin-bottom:0}
+  .vs{display:grid;gap:12px;margin:34px 0 14px}
+  .vs a{display:block;background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px;text-decoration:none;transition:border-color .12s ease}
+  .vs a:hover{border-color:var(--accent)}
+  .vs .when{display:block;font-size:11.5px;font-weight:800;letter-spacing:.1em;color:var(--accent);margin-bottom:8px}
+  .vs q{display:block;quotes:none;font-size:17px;font-weight:700;color:var(--fg);line-height:1.55;letter-spacing:-.025em;margin-bottom:10px}
+  .vs .src{font-size:12.5px;color:var(--fg-3)}
+  @media (min-width:640px){.vs{grid-template-columns:1fr 1fr}}
+  .more-rec{font-size:13.5px;color:var(--fg-3);line-height:1.9;margin-bottom:22px}
+  .more-rec a{color:var(--fg-2)}
+  .honest{font-size:14.5px;color:var(--fg-3);border-top:1px solid var(--line);padding-top:16px}
+
+  /* 04 더 알아보기 */
+  .next{
+    background:radial-gradient(115% 92% at 50% 100%,rgba(226,64,42,.17) 0%,rgba(226,64,42,0) 64%),var(--bg-2);
+    border-top:1px solid var(--line);padding:76px 0 84px;text-align:center;
+  }
+  .next p{margin:0 auto 30px;max-width:440px}
+  .btn{
+    display:block;width:100%;max-width:360px;margin:0 auto;
+    padding:18px 20px;border-radius:12px;background:var(--accent);color:#fff;
+    font-size:16.5px;font-weight:700;text-decoration:none;letter-spacing:-.025em;
+    transition:transform .12s ease;
+  }
+  .btn:active{transform:scale(.985)}
+
+  footer{padding:26px 0 40px;text-align:center;font-size:12px;color:var(--fg-3);line-height:1.9}
+
+  /* 검토용: 주소 끝에 ?review 를 붙이면 새로 쓴 문장이 노란 테두리로 보인다 */
+  .review .nw{background:rgba(255,210,0,.13);outline:1px dashed rgba(255,210,0,.7);outline-offset:2px;border-radius:3px}
+  .review-bar{display:none}
+  .review .review-bar{display:block;position:sticky;top:0;z-index:20;background:#3a3000;color:#ffe680;font-size:13px;padding:8px 16px;text-align:center}
+
+  @media (min-width:640px){
+    body{font-size:17px}
+    section{padding:96px 0}
+  }
+</style>
+<script>
+  try{if(/[?&]review\b/.test(location.search))document.documentElement.classList.add('review');}catch(e){}
+</script>
+</head>
+<body>
+
+<div class="review-bar">검토 모드 · 노란 테두리 = 이번에 새로 쓴 문장 (확인 필요)</div>
+
+<!-- ══════════ 01 선언 ══════════ -->
+<section class="hero" id="declare">
+  <div class="wrap">
+    <p class="who">행동주의자 · 행동모임</p>
+    <h1>기상모임 아니다.<br><span class="hl">독서모임도 아니다.</span></h1>
+    <p class="sub">시장과 인생을 동시에 다루는 훈련소다.</p>
+
+    <div class="lines">
+      <p>5시에 일어나는 게 중요한 게 아니다.<br><b>일어난 다음 무엇을 하느냐가 중요하다.</b></p>
+      <p><span class="nw">책을 몇 권 읽었는지도 중요하지 않다.</span><br><b class="nw">읽은 다음 무엇이 달라졌느냐가 중요하다.</b></p>
+    </div>
+
+    <div class="pull">5시 기상보다 중요한 건 5시에 일어나게 만드는 시스템이다.<br>열정보다 중요한 건 그 열정이 꺼지지 않게 붙잡는 구조다.</div>
+
+    <p class="since"><b>2020년 10월</b>부터 <span class="nw">그렇게 해왔다.</span></p>
+  </div>
+</section>
+
+<!-- ══════════ 02 강의 하나 ══════════ -->
+<section id="lecture">
+  <div class="wrap">
+    <span class="eyebrow">행동주의자 강의</span>
+    <h2>말보다 직접 들어보는 게<br>빠르다.</h2>
+    <p><span class="nw">잠을 줄이는 것도 선택이다. 무엇을 치르는지 알고 골라야 선택이다.</span></p>
+
+    <figure class="clip">
+      <video controls playsinline preload="none" poster="images/lecture-sleep.jpg" src="https://pub-e30602c3de2646f8999fe70d9efe059f.r2.dev/%EA%B0%95%EC%9D%98%EC%8B%A4/%EA%B0%95%EC%9D%98%EC%98%81%EC%83%81_%EC%88%98%EB%A9%B4_261016.mp4"></video>
+      <figcaption><span class="lab">행동주의자 강의 · 4:28</span><b>잠을 줄였다면 왜 줄였는지 알고 있어야 합니다</b>비용을 알고 고르는 것, 그게 선택이다</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══════════ 03 400일의 증거 ══════════ -->
+<section id="proof">
+  <div class="wrap">
+    <span class="eyebrow">증거</span>
+    <h2>내 말은 됐고,<br>해본 사람 기록을 봐라.</h2>
+
+    <div class="count"><span class="n">400일</span><span class="u">100일 × 4번, 연속</span></div>
+    <ol class="steps" aria-hidden="true"><li></li><li></li><li></li><li></li></ol>
+
+    <div class="story">
+      <p>100일을 한 번 끝낸 사람이 있다.</p>
+      <p>그 사람은 다시 100일을 시작했다.</p>
+      <p>그리고 다시 100일. 한 번 더 100일.</p>
+      <p><strong>그렇게 400일이다.</strong> <span class="nw">2022년 12월에 들어와 2024년 1월에 네 번째 100일을 끝냈다.</span></p>
+      <p>아래는 그 사람이 직접 남긴 기록이다.</p>
+    </div>
+
+    <div class="vs">
+      <a href="https://blog.naver.com/rladhrgus54/223050698865" target="_blank" rel="noopener">
+        <span class="when">첫 번째 100일 · 2023.03</span>
+        <q>단 한 번도 빠지지 않았습니다. 그 어떤 것도 대충 하지 않았습니다.</q>
+        <span class="src">「100일간의 여정…」 원문 보기 ↗</span>
+      </a>
+      <a href="https://blog.naver.com/rladhrgus54/223329628459" target="_blank" rel="noopener">
+        <span class="when">네 번째 100일 · 2024.01</span>
+        <q>GEAR가 올라갈수록 분명 더 바빠지고 더 힘든데, 지치지 않습니다.</q>
+        <span class="src">「GEAR4 — 책임(責任)을 위한 희생(犧牲)」 원문 보기 ↗</span>
+      </a>
+    </div>
+    <p class="more-rec">두 번째·세 번째 기록:
+      <a href="https://blog.naver.com/rladhrgus54/223142484556" target="_blank" rel="noopener">GEAR2 종료, GEAR3 시작</a> ·
+      <a href="https://blog.naver.com/rladhrgus54/223230718065" target="_blank" rel="noopener">GEAR3 — 100일의 고통(苦痛)을 이겨내다</a></p>
+
+    <p class="honest"><span class="nw">모두가 이렇게 된다고 말하지 않는다. 한 사람이 실제로 해냈다는 기록이다.</span></p>
+  </div>
+</section>
+
+<!-- ══════════ 04 더 알아보기 ══════════ -->
+<section class="next" id="next">
+  <div class="wrap">
+    <h2>여기까지 읽었다면,<br>이제 어떤 곳인지<br>직접 판단해 봐라.</h2>
+    <p>어떤 환경에서 무엇을 하는지, 100일 동안 무엇을 요구하는지, 어떤 사람이 참여할 수 있는지. <span class="nw">자세한 건 행동모임 소개 페이지에 적어 뒀다.</span></p>
+    <!-- 출구는 하나. 무료 커뮤니티가 생기면 이 href만 바꾸면 된다. -->
+    <a class="btn" href="https://okhyun304-dot.github.io/action100-2026/">행동모임 자세히 알아보기</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">주식회사 행동주의자들</div>
+</footer>
+
+</body>
+</html>
